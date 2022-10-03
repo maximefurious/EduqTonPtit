@@ -1,0 +1,49 @@
+body{
+	background-color: #B83E3E;
+}
+
+#nav {
+	height: 200px;
+	text-align: center; /* centrer le texte */
+}
+#nav li {
+	text-decoration: none;
+	color: black;
+	list-style: none;
+	background-color: #abc;
+	margin-top: 100px;
+	width: 100px;
+	height: 50px;
+	border: 3px black solid;
+}
+#nav a {
+	text-decoration: none;
+	color: black;
+}
+
+#nav li.fondu:hover {
+	background-color: #768583;
+	transition: 0.3s
+}
+
+#fleche{
+	background: url(img/fleche.jpg);
+	background-position:bottom;
+	
+}
+
+
+a{
+	all:unset;
+}
+
+img.cours{
+	border: 3px black solid;
+}
+
+img.img{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	
+}
