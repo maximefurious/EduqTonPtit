@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dictée3</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css">
+		
+</head>
+<header>
+	<a href="../../index.html"><img src="../../img/home.png" width="50" height="50"></a>	
+</header>
+<body>
+	<p>
+		<img class="cours" src="../../img/francais/Dictee/3.PNG">
+	</p>
+	<audio controls="controls">
+		<source src="../../mp3/dictee3.mp3" type="audio/mp3">
+	</audio>
+
+			<script language="JavaScript"><!--
+
+var browser = navigator.appName;
+var version = navigator.appVersion.charAt(0);
+
+// Fonction du moteur du qcm :
+// hide
+/* GameQuiz v1.0 by Wizzz.
+   Copyright (c) of Wizzz, 1997.
+   Permission to use, edit, etc. granted as long as the head section is intact!
+   Modifictions et ajouts par Eric Dromer... à suivre...
+*/
+
+// declaration des variables de tableaux et des points
+var rep = new Array;
+var faite = new Array;
+var score = 0;
+
+// rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+// infos : VOILA LES REPONSES A MODIFIER (a, b, c ou d)
+// (a) est mis ici par défaut
+
+rep[1] = "a";
+rep[2] = "b";
+rep[3] = "c";
+rep[4] = "d";
+rep[5] = "d";
+rep[6] = "d";
+rep[7] = "b";
+rep[8] = "a";
+rep[9] = "b";
+rep[10] = "d";
+
+
+// fonction qui analyse les reponses quand on clique sur les boutons radio
+
+function Engine(question, reponse) {
+
+// 1 si fausse
+        if (reponse != rep[question]) {
+
+// si pas deja repondu
+                if (!faite[question]) {
+                        faite[question] = -1;
+
+                                            }
+
+// si deja repondu
+                else {
+                    alert("Tu as déjà répondu à cette question !");
+                        }
+                }
+// 2 si bonne
+        else {
+
+// si pas deja repondu
+                if (!faite[question]) {
+                        faite[question] = -1;
+
+// ajoute un point et donne le total intermediaire
+                        score++;
+                        }
+
+// si deja repondu
+                else { 
+                    alert("Tu as déjà répondu à cette question !");
+                        }
+                }
+}
+
+
+// fonction qui donne le resultat (bouton Resultat)
+// vous pouvez changer le texte du message mais certains caracteres sont interdits. Attention !
+function NextLevel () {
+        if (score > 10) {
+                alert("Tricheur !");
+                }
+        if (score > 9) {
+                alert(score + "/10 " + "Un coup de chance !... peut-être.");
+                }
+        if (score >= 8 && score < 10) {
+                alert(score + "/10 " + "Très Bien, mais... pas parfait.");
+                }
+        if (score >= 5 && score < 8) {
+                alert(score + "/10 " + "Bien, on a vu mieux que cela cependant...");
+                }
+        if (score >= 4 && score < 5) {
+                alert(score + "/10 " + "Pas mal, on a vu mieux que cela cependant...");
+                }
+        if (score >= 3 && score < 4) {
+                alert(score + "/10 " + "Pas terrible... un autre essai ?");
+                }
+        if (score < 2) {
+                alert(score + "/10 " + "Un autre essai peut-être ?");
+                }
+//        else {
+//					alert(score + "/20 " + "Un autre essai ?");
+//                }
+
+// ======================================================
+// infos : ligne qui suit à modifier pour envoyer le formulaire,
+// (attention, verifier auparavant la balise Form...)
+// document.quest.submit()
+
+// ligne qui suit pour vider le formulaire:
+faite = new Array;
+ score = 0;
+// ======================================================
+// pour IE4 ou Nettcape 3 et +
+
+	if(browser == "Microsoft Internet Explorer" && version >= 4 || browser == "Netscape" && version >= 3) {
+	document.quest.reset();
+	}
+
+}
+
+
+// --></script>
+
+<h1><center><font face="Arial">QUIZZ</font></center></h1>
+<h2><center><font face="Arial">ATTENTION SI VOUS COCHEZ UNE CASE VOTRE CHOIX SERA DEFINITIF</font></center></h2>
+
+<p><font face="Arial"><NOSCRIPT>JavaScript est désactivé. Utilisez un
+autre navigateur plus récent...</NOSCRIPT>&nbsp; </font></p>
+
+<form name="quest">
+    <hr color="#FFFF00">
+    <p><font color="#FFFF00" face="Arial">1&nbsp;</font><font
+    face="Arial"><br>
+    Premier mot<br>
+    <input type="radio" name="1" value="a"
+    onclick="Engine(1, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;a&nbsp;</font><font face="Arial">promenait<br>
+    <input type="radio" name="1" value="b"
+    onclick="Engine(1, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;b&nbsp;</font><font face="Arial">promenais<br>
+    <input type="radio" name="1" value="c"
+    onclick="Engine(1, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;c&nbsp;</font><font face="Arial">promenaient<br>
+    <input type="radio" name="1" value="d"
+    onclick="Engine(1, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;d&nbsp;</font><font face="Arial">promenai<br>
+    <br>
+    </font><font color="#FFFF00" face="Arial">2&nbsp;</font><font
+    face="Arial"><br>
+    Deuxième mot<br>
+    <input type="radio" name="2" value="a"
+    onclick="Engine(2, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;a&nbsp;</font><font face="Arial">trouvas<br>
+    <input type="radio" name="2" value="b"
+    onclick="Engine(2, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;b&nbsp;</font><font face="Arial">trouva<br>
+    <input type="radio" name="2" value="c"
+    onclick="Engine(2, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;c&nbsp;</font><font face="Arial">trouvai<br>
+    <input type="radio" name="2" value="d"
+    onclick="Engine(2, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;d&nbsp;</font><font face="Arial">trouvât<br>
+    <br>
+    </font><font color="#FFFF00" face="Arial">3&nbsp;</font><font
+    face="Arial"><br>
+    Troisième mot<br>
+    <input type="radio" name="3" value="a"
+    onclick="Engine(3, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;a&nbsp;</font><font face="Arial">frémi<br>
+    <input type="radio" name="3" value="b"
+    onclick="Engine(3, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;b&nbsp;</font><font face="Arial">frémient<br>
+    <input type="radio" name="3" value="c"
+    onclick="Engine(3, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;c&nbsp;</font><font face="Arial">frémit<br>
+    <input type="radio" name="3" value="d"
+    onclick="Engine(3, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;d&nbsp;</font><font face="Arial">frémis<br>
+    <br>
+    </font><font color="#FFFF00" face="Arial">4&nbsp;</font><font
+    face="Arial"><br>
+    Quatrième mot<br>
+    <input type="radio" name="4" value="a"
+    onclick="Engine(4, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;a&nbsp;</font><font face="Arial">voudrais<br>
+    <input type="radio" name="4" value="b"
+    onclick="Engine(4, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;b&nbsp;</font><font face="Arial">voudraient<br>
+    <input type="radio" name="4" value="c"
+    onclick="Engine(4, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;c&nbsp;</font><font face="Arial">voudrai<br>
+    <input type="radio" name="4" value="d"
+    onclick="Engine(4, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;d&nbsp;</font><font face="Arial">voudrait<br>
+    <br>
+    </font><font color="#FFFF00" face="Arial">5&nbsp;</font><font
+    face="Arial"><br>
+    Cinquième mot<br>
+    <input type="radio" name="5" value="a"
+    onclick="Engine(5, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;a&nbsp;</font><font face="Arial">faient<br>
+    <input type="radio" name="5" value="b"
+    onclick="Engine(5, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;b&nbsp;</font><font face="Arial">fais<br>
+    <input type="radio" name="5" value="c"
+    onclick="Engine(5, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;c&nbsp;</font><font face="Arial">faisait<br>
+    <input type="radio" name="5" value="d"
+    onclick="Engine(5, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;d&nbsp;</font><font face="Arial">fait<br>
+    <br>
+    </font><font color="#FFFF00" face="Arial">6&nbsp;</font><font
+    face="Arial"><br>
+    Sixième mot<br>
+    <input type="radio" name="6" value="a"
+    onclick="Engine(6, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;a&nbsp;</font><font face="Arial">demanda<br>
+    <input type="radio" name="6" value="b"
+    onclick="Engine(6, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;b&nbsp;</font><font face="Arial">demandai<br>
+    <input type="radio" name="6" value="c"
+    onclick="Engine(6, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;c&nbsp;</font><font face="Arial">demandes<br>
+    <input type="radio" name="6" value="d"
+    onclick="Engine(6, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;d&nbsp;</font><font face="Arial">demande<br>
+    <br>
+    </font><font color="#FFFF00" face="Arial">7&nbsp;</font><font
+    face="Arial"><br>
+    Septième mot<br>
+    <input type="radio" name="7" value="a"
+    onclick="Engine(7, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;a&nbsp;</font><font face="Arial">prépares<br>
+    <input type="radio" name="7" value="b"
+    onclick="Engine(7, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;b&nbsp;</font><font face="Arial">prépare<br>
+    <input type="radio" name="7" value="c"
+    onclick="Engine(7, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;c&nbsp;</font><font face="Arial">préparai<br>
+    <input type="radio" name="7" value="d"
+    onclick="Engine(7, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;d&nbsp;</font><font face="Arial">prépara<br>
+    <br>
+    </font><font color="#FFFF00" face="Arial">8&nbsp;</font><font
+    face="Arial"><br>
+    Huitième mot<br>
+    <input type="radio" name="8" value="a"
+    onclick="Engine(8, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;a&nbsp;</font><font face="Arial">sommes<br>
+    <input type="radio" name="8" value="b"
+    onclick="Engine(8, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;b&nbsp;</font><font face="Arial">somme<br>
+    <input type="radio" name="8" value="c"
+    onclick="Engine(8, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;a&nbsp;</font><font face="Arial">somment<br>
+    <input type="radio" name="8" value="d"
+    onclick="Engine(8, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;b&nbsp;</font><font face="Arial">sommaire<br>	
+    <br>
+    </font><font color="#FFFF00" face="Arial">9&nbsp;</font><font
+    face="Arial"><br>
+    Neuvième mot<br>
+    <input type="radio" name="9" value="a"
+    onclick="Engine(9, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;a&nbsp;</font><font face="Arial">prient<br>
+    <input type="radio" name="9" value="b"
+    onclick="Engine(9, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;b&nbsp;</font><font face="Arial">pris<br>
+    <input type="radio" name="9" value="c"
+    onclick="Engine(9, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;a&nbsp;</font><font face="Arial">priait<br>
+    <input type="radio" name="9" value="d"
+    onclick="Engine(9, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;a&nbsp;</font><font face="Arial">prit<br>
+    <br>
+    </font><font color="#FFFF00" face="Arial">10&nbsp;</font><font
+    face="Arial"><br>
+    Dixième mot<br>
+    <input type="radio" name="10" value="a"
+    onclick="Engine(10, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;a&nbsp;</font><font face="Arial">aiguises<br>
+    <input type="radio" name="10" value="b"
+    onclick="Engine(10, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;b&nbsp;</font><font face="Arial">aiguisent<br>
+    <input type="radio" name="10" value="c"
+    onclick="Engine(10, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;c&nbsp;</font><font face="Arial">aiguisa<br>
+    <input type="radio" name="10" value="d"
+    onclick="Engine(10, this.value)"></font><font color="#FF0000"
+    face="Arial">&nbsp;d&nbsp;</font><font face="Arial">aiguise<br>
+    <br>
+    </font></p>
+    <p><font face="Arial">&nbsp; <input type="button"
+    name="Resultats" value="Résultats" onclick="NextLevel()"></font></p>  
+    <br>
+    <br>
+
+	<a href="../Francais3.html"><img class="img" src="../../img/fleche.jpg" width="50" height="50" id="fleche"></a>
+</body>
+<footer>
+	
+</footer>
+</html>
